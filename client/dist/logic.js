@@ -56,7 +56,7 @@ function mainloop() {
         });
         const doc = firebase_1.firestore.doc("users/" + USER_ID).onSnapshot(sp => {
             const data = sp.data();
-            const team = data.team
+            const team = data.team || "offline"
             const emoji = Emojis[data.team] || "🎮"
             const definedTeam = team + " " + emoji
             const inGame = team == "offline" && "Offline!" || "In Game!"
@@ -65,7 +65,9 @@ function mainloop() {
                 smallImageKey: "scpficon",
                 instance: false,
                 details: inGame,
-                state: team !== "offline" && definedTeam || "Taking a Break 🌙"
+                state: team !== "offline" && definedTeam || "Taking a Break 🌙",
+                largeImageText: "Area-27v2",
+                smallImageText: "SCPF",
             });
             console.log("Updated team to " + team + "!");
         });

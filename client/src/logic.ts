@@ -6,23 +6,6 @@ const RPC_CLIENT = new RPC.Client({
     transport: "ipc"
 });
 
-const Emojis = {
-    "Foundation Personnel": "📋",
-    "Chaos Insurgency": "👻",
-    "Department of External Affairs": "📝",
-    "Engineering and Technical": "👷",
-    "Ethics Committee": "✏️",
-    "Intelligence Agency": "👁️",
-    "Internal Security Department": "🛡️",
-    "Logistics Department": "🚚",
-    "Manufacturing Department": "🖥️",
-    "Scientific Department": "🔬",
-    "Tactical Intervention Unit": "🔪",
-    "Security Department": "⚔️",
-    "Mobile Task Force": "🎖️",
-    "Medical Department": "🩺"
-}
-
 export function mainloop() {
     const USER_ID = readData().robloxUserId;
 
@@ -37,8 +20,7 @@ export function mainloop() {
 
         const doc = firestore.doc("users/" + USER_ID).onSnapshot(sp => {
             const data = sp.data();
-            const rawteam = data.team
-            const team = rawteam + Emojis[rawteam].content
+            const team = data.team
             const inGame = team == "offline" && "Offline!" || "In Game!"
             RPC_CLIENT.setActivity({
                 largeImageKey: "gameicon",
@@ -47,8 +29,6 @@ export function mainloop() {
                 details: inGame,
                 state: team !== "offline" && team || "") || "Taking a Break 🌙"
             });
-            console.log("Updated team to " + team + "!");
-        })
     });
 
     RPC_CLIENT.login({
