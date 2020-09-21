@@ -1,5 +1,5 @@
 ## Area27RPC
-**Written by Sxribe**
+**Written by Sxribe & lxuca**
 
 Discord + Area-27v2 Intergration.
 
