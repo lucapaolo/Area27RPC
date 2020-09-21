@@ -68,6 +68,7 @@ function mainloop() {
                 state: team !== "offline" && definedTeam || "Taking a Break 🌙",
                 largeImageText: "Area-27v2",
                 smallImageText: "SCPF",
+                startTimestamp: Math.round((new Date()).getTime() / 1000)
             });
             console.log("Updated team to " + team + "!");
         });
