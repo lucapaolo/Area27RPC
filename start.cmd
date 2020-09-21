@@ -11,4 +11,6 @@ echo Starting application...
 echo.
 echo.
 
-node index.js --redirect-warnings=warnings.log
+cd client
+
+npm i && cls && node dist/index.js --redirect-warnings=warnings.log
