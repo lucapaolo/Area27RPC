@@ -9,3 +9,5 @@ Discord + Area-27v2 Intergration.
 
 If it fails to run, install you have **Node.js** and **Git** installed.
  
+Node.js - https://nodejs.org/en/
+Git - https://git-scm.com/
