@@ -1,10 +1,9 @@
-# Area27RPC
-## Written by Sxribe
-*While the client is opensource, the server is not*
+## Area27RPC
+**Written by Sxribe**
 
-Instructions:
+Discord + Area-27v2 Intergration.
 
-Clone/Download a ZIP with the green "Code" button at the top of the website.
-Make sure you have the latest version of Node installed (https://nodejs.org/)
-
-Open the folder, then run the `start.cmd` file.
+# Usage
+1. Clone the repository by visiting our **Releases** page and finding the latest version.
+2. Open **start**, and you're ready to go!
+ 
